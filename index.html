@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e6e9df" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox=%220%200%2064%2064%22%3E%3Crect%20width=%2264%22%20height=%2264%22%20fill=%22%236e4335%22/%3E%3Ctext%20x=%2232%22%20y=%2246%22%20text-anchor=%22middle%22%20font-size=%2240%22%20fill=%22%23f4ede0%22%3E%E8%98%87%3C/text%3E%3C/svg%3E" />
+    <title>一园藏天地 · 苏州园林漫游</title>
+  </head>
+  <body>
+    <div id="garden-canvas" aria-label="可交互的苏州园林三维场景"></div>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <div id="loading-screen" class="loading-screen" role="status" aria-live="polite">
+      <div class="loading-emblem">園</div>
+      <div class="loading-line"></div>
+      <p>正 在 入 园</p>
+      <small>PREPARING YOUR JOURNEY</small>
+    </div>
+    <div class="interface">
+      <header class="site-header">
+        <div class="brand">
+          <span class="brand-mark">蘇</span>
+          <span class="brand-copy"><strong>姑苏 · 一园</strong><small>THE SUZHOU GARDEN</small></span>
+        </div>
+        <div class="header-center"><span class="header-dash"></span> 江南造境 · 数字游园 <span class="header-dash"></span></div>
+        <button id="fullscreen-button" class="fullscreen-button" type="button" aria-label="切换全屏">全屏观园 <span aria-hidden="true">↗</span></button>
+      </header>
+      <main class="main-content">
+        <section class="introduction" aria-label="园林介绍">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A JOURNEY THROUGH JIANGNAN</div>
+          <p class="intro-small">方寸之间，自有山河。</p>
+          <h1>一园<span>藏</span><br />天地</h1>
+          <p class="intro-description">循粉墙黛瓦，过曲桥听风。<br />于一池一石间，遇见江南的诗意。</p>
+          <div class="intro-divider"><span></span><i>✧</i><span></span></div>
+          <div class="intro-footnote">以虚拟造景，重现园林之美 <span>·</span> 四时皆可游</div>
+        </section>
+        <aside class="navigation" aria-label="观景点导航">
+          <div class="navigation-heading"><span>游 园 路 线</span><small>EXPLORE THE GARDEN</small></div>
+          <div id="view-list" class="view-list"></div>
+          <div class="navigation-foot"><span class="navigation-ornament">◈</span> 点击一处，即刻入景</div>
+        </aside>
+      </main>
+      <footer class="bottom-bar">
+        <div class="view-caption">
+          <span id="view-number" class="view-number">01 / 07</span>
+          <span class="caption-divider"></span>
+          <div><strong id="view-title">全园胜景</strong><small id="view-subtitle">一池三山 · 咫尺乾坤</small></div>
+        </div>
+        <div class="interaction-hint"><span class="mouse-symbol" aria-hidden="true"></span><span id="interaction-text">拖动旋转 <i>·</i> 滚轮缩放 <i>·</i> 点击漫游</span></div>
+        <button id="walk-button" class="walk-button" type="button" aria-pressed="false">自由漫游 <span aria-hidden="true">⌖</span></button>
+        <button id="tour-button" class="tour-button" type="button"><span class="tour-icon" aria-hidden="true">▶</span><span class="tour-label">开启游园</span><span class="tour-arrow" aria-hidden="true">↗</span></button>
+      </footer>
+      <div class="vertical-label" aria-hidden="true">SUZHOU GARDEN · A LIVING LANDSCAPE</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
